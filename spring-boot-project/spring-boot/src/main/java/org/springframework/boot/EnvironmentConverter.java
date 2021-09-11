@@ -79,6 +79,7 @@ final class EnvironmentConverter {
 	private StandardEnvironment convertEnvironment(ConfigurableEnvironment environment,
 			Class<? extends StandardEnvironment> type) {
 		StandardEnvironment result = createEnvironment(type);
+		/*设置活动文件*/
 		result.setActiveProfiles(environment.getActiveProfiles());
 		result.setConversionService(environment.getConversionService());
 		copyPropertySources(environment, result);
